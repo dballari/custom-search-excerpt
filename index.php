@@ -3,7 +3,7 @@
 Plugin Name: Custom Search Excerpt
 Plugin URI: https://ballarinconsulting.com/plugins
 Description: A WordPress plugin that customizes excerpts in search results to show text around first search keyword.
-Version: 0.0.1
+Version: 0.0.2
 Author: David Ballarin Prunera
 Author URI: https://profiles.wordpress.org/dballari/
 License: GPL3
@@ -25,10 +25,10 @@ function custom_excerpt_for_search($excerpt, $post_obj) {
         // Loop through search keywords and find matches
         foreach ($search_terms as $term) {
             $text_to_search = $full_text;
-            $pos = stripos($text_to_search, $term);
+            $pos = mb_stripos($text_to_search, $term);
             if ($pos !== false) {
                 // Extract text around the keyword, adjust length as needed
-                $excerpt = substr($text_to_search, max(0, $pos - 50), 400);
+                $excerpt = mb_substr($text_to_search, max(0, $pos - 50), 400);
                 break; // Only extract content for the first keyword match
             }
         }

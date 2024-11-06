@@ -4,7 +4,7 @@ Donate link: https://pay.sumup.com/b2c/QFMKLYCT
 Tags: search, excerpt
 Tested up to: 6.6.2
 Requires at least: 6.5
-Stable tag: 0.0.1
+Stable tag: 0.0.2
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -22,6 +22,9 @@ To test this plugin in your WordPress site, use the search bar and enter a term 
 This plugin focuses on displaying relevant excerpts on search result pages and doesn’t change excerpts elsewhere on your site. It’s lightweight and easy to modify for additional functionality if desired.
 
 == Changelog ==
+
+= 0.0.2 =
+* Use mb_ string functions for multibyte characters like Chinese
 
 = 0.0.1 =
 * Pass all checks with Plugin Check plugin
